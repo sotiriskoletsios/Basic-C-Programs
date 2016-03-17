@@ -1,0 +1,26 @@
+//programma na diavazei tous vathmous 50 foititwn kai na tous apothikeuei se enan pinaka stin sinexeia na diavazei enan arithmo kai na emfanizei ta stoixeia tou pinaka me megaliteri
+//i isi timi apo auton!
+
+#include <stdio.h>
+int main()
+{
+	int i;
+	float grd, arr[50];
+	
+	for(i=0; i<50; i++)
+	{
+		printf("Enter grade: ");
+		scanf("%f", &arr[i]);
+		
+	}
+	
+	printf("Enter base: ");
+	scanf("%f", &grd);
+	
+	for (i=0; i<50; i++)
+	{
+		if (arr[i] >= grd)
+			printf("Grd = %f\n", arr[i]);
+	}
+	return 0;
+}
