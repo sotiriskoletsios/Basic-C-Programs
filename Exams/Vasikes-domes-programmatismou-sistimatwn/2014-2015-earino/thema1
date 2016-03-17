@@ -1,0 +1,36 @@
+//na grafei sinartisi poy na dexete san orisma tis 3 pleures trigwnou (a,b,c) kai na epistrepei sto kiriws programma
+//tin timi -1 an h gwnia b einai o3eia, tin timi 0 an i gwnia B einai orthi kai tin timi 1 an i gwnia B einai amvlia.
+//Episis na pragmatopoiei ti sxetiki ektipwsi stin othoni (B<90,B=90,B>90)
+//H sinartisi na kaleitai apo programma sto opio ta aparaitita dedomena dinontai apo to pliktrologio.
+#include <stdio.h>
+#include <math.h>
+int gonia(float a, float b, float c);
+int main()
+{
+	int i;
+	float a,b,c;
+	printf("Give a,b,c: ");
+	scanf("%f%f%f", &a, &b, &c);
+	i = gonia(a,b,c);
+	return 0;
+}
+int gonia(float a, float b, float c)
+{
+	float g;
+	g = (a*a - b*b +c*c)/2*a*c;
+	if (g < 0)
+	{
+		printf("B > 90");
+		return 1;
+	}
+	else if (g=0)
+	{
+		printf("B = 90");
+		return 0;
+	}
+	else
+	{
+		printf("B < 90");
+		return -1;
+	}
+}
