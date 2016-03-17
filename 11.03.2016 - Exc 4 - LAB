@@ -1,0 +1,24 @@
+//sinartisi p na dexete san parametrous 2 akeraious kai an to athrisma tous einai iso me 10 na emfanizei 1 alliws Two. Programma p na diavazei 2 akeraious kai na kalei tin sinartisi.
+#include <stdio.h>
+void emfanise(int i, int j);
+int main()
+{
+	int i,j;
+	
+	printf("Enter numbers: ");
+	scanf("%d%d", &i, &j);
+	emfanise(i,j);
+	return 0;
+}
+void emfanise(int i , int j)
+{
+	if (i+j == 10)
+	{
+		printf("one\n");
+		
+	}
+	else
+	{
+		printf("two\n");
+	}
+}
