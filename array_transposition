@@ -1,0 +1,37 @@
+//programma pou diavazei enan pinaka 30 akairewn na kanei antimetathesi ana dekada kai sto telos na antimetathetei tin 1i me tin 3i dekada.
+#include <stdio.h>
+int main()
+{
+	int i,j,a[30],c[30],t;
+	for (i=0;i<30;i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	for (i=0;i<30;i++)
+	{
+		
+		c[i]=a[i];
+		
+	}
+	for (i=0;i<10;i++)
+	{
+		a[i] = c[9-i]; 
+		a[10+i] = c[19-i]; 
+		a[20+i] = c[29-i];
+	}
+	for (i=0;i<30;i++)
+	{
+		c[i]=a[i];
+	}
+	for (i=0;i<10;i++)
+	{
+		a[i] = c[29-i];
+		a[29-i] = c[i];
+	}
+	printf("-------\n");
+	for (i=0;i<30;i++)
+	{
+		printf("%d\n", a[i]);
+	}
+	return 0;
+}
