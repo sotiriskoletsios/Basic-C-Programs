@@ -1,0 +1,20 @@
+//Na ypologistei to orismeno oloklirwma tis sinartisis f(x)=(x^2 + 3) / (x^7 + 15)
+//sto diastima [a,b]. Oi arithmoi a,b na dinontai apo to pliktrologio
+#include <stdio.h>
+int main()
+{
+	int i;
+	float a,b,olo=0,dx,x,y;
+	printf("Dwse a,b: ");
+	scanf("%f%f", &a, &b);
+	dx = (b-a)/1000000;
+	for (i=0;i<1000000;i++)
+	{
+		x = a+ i*dx;
+		y = (x*x+3)/(x*x*x*x*x*x*x+15); //you can use pow(x,2) for x^2 and pow(x,7) for x^7
+		olo += y*dx;
+	}
+	
+	printf("Olo = %f", olo);
+	return 0;
+}
